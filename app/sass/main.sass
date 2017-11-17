@@ -4,11 +4,12 @@ $accent-color: #fdb902
 
 body
     font-family: "Poppins-Medium", "Arial", "Helvetica", sans-serif
+    background-color: gray
 
-/* topWrapper */
+/* top wrapper */
 
 .topWrapper
-    background: url(../images/top_bg.jpg) no-repeat center center
+    background: url(../images/top_bg.jpg) no-repeat center top
     background-size: cover
 
 /* header */
@@ -19,43 +20,44 @@ body
         .row
             display: flex
             align-items: center
-    .logo
+    .header__logo
         display: block
         width: 108px
         height: 25px
         background: url(../images/logo.png) no-repeat center center
         background-size: cover
-    .menu
-        padding: 0
-        margin: 0
-        list-style-type: none
-        .menu__item
-            float: left
-            margin-right: 58px
-            a
-                margin-left: -7px
-                font-size: 14px
-                color: $main-color
-                text-transform: uppercase
-                text-decoration: none
-            &:last-child
-                margin-right: 0
-            &:after
-                display: block
-                content: ""
-                margin-left: -7px
-                width: 0
-                height: 2px
-                margin-top: 10px
-                background-color: transparent
-                transition: all .3s ease
-            &:hover
-                &:after
-                    width: 100%
-                    background-color: $main-color
+    .header__nav
+        .menu
+            padding: 0
+            margin: 0
+            list-style-type: none
+            .menu__item
+                float: left
+                margin-right: 54px
+                a
+                    display: block
+                    font-size: 14px
+                    color: $main-color
+                    text-transform: uppercase
+                    text-decoration: none
+                    &:after
+                        display: block
+                        content: ""
+                        width: 0
+                        height: 2px
+                        margin-top: 3px
+                        background-color: transparent
+                        transition: all .3s ease
+                    &:hover
+                        &:after
+                            width: 100%
+                            background-color: $main-color
+                &:last-child
+                    margin-right: 0
 
     .header__btn
-        padding: 14px 18px
+        float: right
+        padding: 13px 23px 13px 18px
         font-family: "Poppins-SemiBold"
         font-size: 14px
         color: $main-color
@@ -63,6 +65,8 @@ body
         border-radius: 4px
         outline: none
         background-color: transparent
+        text-transform: uppercase
+        transition: all .3s ease
         span
             margin-right: 11px
         &:hover
@@ -77,15 +81,443 @@ body
         display: block
         max-width: 100px
         height: auto
+        margin: 0 auto
     .hero__title
         margin: 0
         line-height: 1
         font-family: "Yesteryear-Regular"
         font-size: 220px
         color: $accent-color
+        text-align: center
     .hero__subtitle
         margin: 0
         line-height: 1
         font-family: "Poppins-SemiBold"
         font-size: 18px
         color: $main-color
+        text-align: center
+        text-transform: uppercase
+
+/* today */
+
+.today
+    position: relative
+    padding: 333px 0 238px
+    background-color: $main-color
+    .today__borderTop
+        position: absolute
+        top: -59px
+        left: 0
+        z-index: 1
+        width: 100%
+        height: auto
+    .today__tomatoesImg
+        position: absolute
+        top: -392px
+        right: 0
+        z-index: 2
+        max-width: 100%
+        height: auto
+    .today__item
+        display: flex
+        align-items: flex-start
+        margin-bottom: 165px
+        .today__textContent
+            width: 55%
+            padding: 0 195px 0 96px
+            .today__number
+                margin: 0 0 50px
+                color: $text-color
+                font-family: "Poppins-Bold"
+                font-size: 36px
+                text-transform: uppercase
+                span
+                    color: $accent-color
+            .today__label
+                margin: 0 0 -23px
+                line-height: 1
+                color: #e5e5e5
+                font-family: "Yesteryear-Regular"
+                font-size: 75px
+            .today__title
+                position: relative
+                margin: 0 0 22px
+                color: $text-color
+                font-family: "Poppins-Bold"
+                font-size: 36px
+                text-transform: uppercase
+                &:before
+                    position: absolute
+                    top: 22px
+                    left: -123px
+                    content: ""
+                    width: 95px
+                    height: 2px
+                    background-color: $text-color
+            .today__desc
+                margin: 0 0 34px
+                color: $text-color
+                font-family: "Crimson-Roman"
+                font-size: 16px
+            .today__price
+                margin: 0 0 26px
+                color: $accent-color
+                font-family: "Poppins-Bold"
+                font-size: 24px
+                text-transform: uppercase
+            .today__link
+                margin: 0 0 49px
+                color: $text-color
+                font-family: "Poppins-Bold"
+                font-size: 12px
+                text-transform: uppercase
+                text-decoration: underline
+                span
+                    margin-left: 7px
+        .today__itemImg
+            width: 45%
+            img
+                display: block
+                max-width: 100%
+                height: 100%
+        &:last-child
+            margin-bottom: 0
+    .today__item.rightSide
+        flex-direction: row-reverse
+        .today__textContent
+            padding: 0 96px 0 195px
+            .today__title
+                &:before
+                    left: -230px
+                    width: 196px
+
+/* our story */
+
+.ourStory
+    position: relative
+    padding: 115px 0
+    background: url(../images/our_story_bg.jpg) no-repeat center center #f7f7f7
+    background-size: contain
+    .ourStory__content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        .ourStory__logo
+            display: block
+            width: 108px
+            height: 25px
+            margin: 0 0 36px
+        .ourStory__title
+            margin: 0 0 20px
+            color: $text-color
+            font-family: "Poppins-Bold"
+            font-size: 24px
+            text-align: center
+            text-transform: uppercase
+            white-space: pre-line
+        .ourStory__text
+            margin: 0 0 78px
+            color: $text-color
+            font-family: "Crimson-Roman"
+            font-size: 16px
+            text-align: center
+            white-space: pre-line
+        .ourStory__author
+            position: relative
+            margin: 0 0 24px
+            color: $text-color
+            font-family: "Poppins-SemiBold"
+            font-size: 14px
+            text-transform: uppercase
+            &:before
+                content: ""
+                position: absolute
+                top: 50%
+                left: -61px
+                width: 52px
+                height: 2px
+                background-color: $text-color
+            &:after
+                content: ""
+                position: absolute
+                top: 50%
+                right: -61px
+                width: 52px
+                height: 2px
+                background-color: $text-color
+    .ourStory__borderBottom
+        position: absolute
+        bottom: -36px
+        left: 0
+        z-index: 1
+        width: 100%
+        height: auto
+
+/* video */
+
+.video
+    position: relative
+    padding: 168px 0 150px
+    background: url(../images/video_bg.jpg) no-repeat center center
+    background-size: cover
+    .video__content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        padding: 84px 0 81px
+        border: 2px solid rgba(255, 255, 255, .5)
+        .video__title
+            margin: 0 0 20px
+            color: $accent-color
+            font-family: "MrDafoe-Regular"
+            font-size: 150px
+        .video__subtitle
+            margin: 0 0 61px
+            color: $main-color
+            font-family: "Poppins-SemiBold"
+            font-size: 16px
+            text-transform: uppercase
+            letter-spacing: 4px
+        .video__btn
+            width: 96px
+            height: 92px
+            background: url(../images/video_btn.png) no-repeat center center
+            background-size: cover
+            border: none
+            outline: none
+
+/* next event */
+
+.next
+    position: relative
+    padding: 190px 0 141px
+    background-color: $main-color
+    .next__borderTop
+        position: absolute
+        top: -52px
+        left: 0
+        z-index: 1
+        width: 100%
+        height: auto
+    .next__eggImg
+        position: absolute
+        top: -324px
+        left: 0
+        z-index: 2
+        max-width: 100%
+        height: auto
+    .next__item
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        .next__textContent
+            width: 60%
+            padding: 70px 100px 0 214px
+            text-align: left
+            .next__title
+                position: relative
+                display: inline-block
+                padding: 20px 27px 14px 33px
+                margin: 0 0 35px
+                border: 4px solid $text-color
+                color: $text-color
+                font-family: "Poppins-SemiBold"
+                font-size: 30px
+                text-transform: uppercase
+                &:before
+                    position: absolute
+                    top: 38px
+                    left: -200px
+                    content: ""
+                    width: 217px
+                    height: 2px
+                    background-color: #4b4141
+            .next__text
+                margin: 0 0 47px
+                color: $text-color
+                font-family: "Crimson-Roman"
+                font-size: 16px
+            .next__link
+                display: block
+                margin: 0 0 64px
+                color: $text-color
+                font-family: "Poppins-Bold"
+                font-size: 12px
+                text-transform: uppercase
+                text-decoration: underline
+                letter-spacing: 1px
+                span
+                    margin-left: 10px
+        .next__itemImg
+            width: 40%
+            img
+                display: block
+                max-width: 100%
+                height: 100%
+
+/* reservation */
+
+.reservation
+    position: relative
+    padding: 108px 0 168px
+    background: url(../images/reservation_bg.jpg) no-repeat center top
+    .reservation__title
+        margin: 0 0 24px
+        line-height: 1
+        color: $text-color
+        font-family: "Poppins-SemiBold"
+        font-size: 30px
+        text-transform: uppercase
+        text-align: center
+    .reservation__text
+        margin: 0 0 54px
+        color: $text-color
+        font-family: "Crimson-Roman"
+        font-size: 16px
+        text-align: center
+        white-space: pre-line
+    .reservation__buttons
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        ul
+            width: 100%
+            padding: 0
+            margin: 0 -12px 42px
+            list-style-type: none
+            font-size: 0
+            li
+                display: inline-block
+                width: 33.3333%
+                padding: 0 12px
+                button
+                    position: relative
+                    display: block
+                    width: 100%
+                    padding: 21px 0
+                    border: none
+                    border-radius: 4px
+                    color: #574e4e
+                    background-color: $main-color
+                    outline: none
+                    font-family: "Crimson-Roman"
+                    font-size: 16px
+                    text-transform: uppercase
+                    text-align: center
+                    span
+                        position: absolute
+                        top: 49%
+                        left: 8%
+                        transform: translateY(-50%)
+        .reservation__findTableBtn
+            display: block
+            padding: 28px 50px 24px 50px
+            color: $main-color
+            background-color: #383033
+            border: 2px solid #383033
+            border-radius: 4px
+            outline: none
+            font-family: "Poppins-SemiBold"
+            font-size: 14px
+            text-transform: uppercase
+    .reservation__borderBottom
+        position: absolute
+        bottom: -48px
+        left: 0
+        width: 100%
+        height: auto
+
+/* footer */
+
+.footer
+    .footer__top
+        padding: 179px 0 172px
+        background: url(../images/footer_bg.jpg) no-repeat center center
+        .footerWorkTime__title
+            margin: 0 0 35px
+            color: $main-color
+            font-family: "Poppins-SemiBold"
+            font-size: 30px
+            text-transform: uppercase
+        .footerWorkTime__list
+            display: flex
+            justify-content: stretch
+            align-items: flex-start
+            .footerWorkTime__item
+                margin-right: 96px
+                &:last-child
+                    margin-right: 0
+                .footerWorkTime__day
+                    margin: 0 0 12px
+                    color: $accent-color
+                    font-family: "Poppins-SemiBold"
+                    font-size: 18px
+                .footerWorkTime__time
+                    color: $main-color
+                    font-family: "Crimson-Roman"
+                    font-size: 16px
+        .footerLocation__title
+            margin: 0 0 35px
+            color: $main-color
+            font-family: "Poppins-SemiBold"
+            font-size: 30px
+            text-transform: uppercase
+        .footerLocation__list
+            display: flex
+            justify-content: stretch
+            align-items: flex-start
+            .footerLocation__item
+                margin-right: 84px
+                &:last-child
+                    margin-right: 0
+                .footerLocation__address
+                    color: $main-color
+                    font-family: "Crimson-Roman"
+                    font-size: 16px
+                .footerLocation__contact
+                    margin: 0 0 12px
+                    color: $main-color
+                    font-family: "Crimson-Roman"
+                    font-size: 16px
+                    a,
+                    span
+                        color: $accent-color
+                        font-family: "Crimson-Italic"
+                        font-size: 18px
+                        text-decoration: none
+    .footer__bottom
+        position: relative
+        padding: 50px 0 36px
+        background-color: #121212
+        .container
+            .row
+                > div
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+        .footer__borderTop
+            position: absolute
+            top: -43px
+            left: 0
+            width: 100%
+            height: auto
+        .footerSocialList
+            padding: 0
+            margin: 0 0 24px
+            list-style-type: none
+            .footerSocialList__item
+                float: left
+                margin-right: 33px
+                a
+                    color: $main-color
+                    font-size: 14px
+                    span
+                &:last-child
+                    margin-right: 0
+        .footer__copyright
+            color: #454545
+            font-size: 14px
